@@ -11,7 +11,7 @@ class Solution:
             sub = s[p1: p2 + 1]
             if sub == sub[::-1] and len(sub) > len(cache):
                     cache = sub
-            if p1  >  p2:
+            if p1  >  p2 or len(sub) < len(cache) :
                 p2 =  len(s) - 1
                 p1 += 1
             else:
